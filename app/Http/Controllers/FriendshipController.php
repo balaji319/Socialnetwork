@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Notification;
 use DB;
 use Auth;
+
 class FriendshipController extends Controller
 {
+   
     public function findfriends()
     {
         $allusers = DB::table('profiles as p')->leftjoin('users as u','u.id','=','p.user_id')
