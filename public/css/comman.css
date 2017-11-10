@@ -1,0 +1,76 @@
+.navbar-default
+    { 
+        background-color: cornflowerblue;
+    }
+    .navbar-default .navbar-nav>li>a, .navbar-default .navbar-text
+     {
+        color: wheat;
+        font-size: 14px;
+    }
+
+    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand 
+    {
+        margin-left: -15px;
+        color: burlywood;
+    }
+    .confirm_request 
+    {
+        background-color: darkseagreen;
+        border-color: #d6e9c6;
+        color: floralwhite;
+    }
+    .accetped_img
+    {
+       margin-top: 18px;
+        margin-left: 11px;
+        margin-bottom: 24px;
+    }
+  
+    .accepted_user 
+    {
+        margin-left: -46px;
+        margin-top: 21px;
+    }
+    .requeste_user
+    {
+        margin-left: -46px;
+        margin-top: -18px;
+    }
+    .requeste_img
+    {
+        margin-bottom: 12px;
+    }
+    .badge_content
+    {
+        background:red;
+        position: relative;
+        top: -15px;
+        left: -10px;
+    }
+    .border_line
+    {
+        border-color: cornflowerblue;
+        width: 94%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .user_profile
+    {
+        background-color: lightsteelblue;
+        margin-top: 11px;
+    }
+    .user_name
+    {
+        font-size: 27px;
+        margin-left: 70px;
+    }
+    .user_form
+    {
+        margin-left: 56px;
+        margin-top: 15px;
+    }
+    .btn-info {
+    color: #fff;
+    background-color: cadetblue;
+    border-color: currentColor;
+}
