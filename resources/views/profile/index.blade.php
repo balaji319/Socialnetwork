@@ -1,9 +1,9 @@
-@extends('layouts.app')
-
+@extends('profile.master')
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        @include('layouts.sidebar')
+        <div class="col-md-9">
             <div class="panel panel-default">
                 <div class="panel-heading">{{$user_pro[0]->name}}</div>
 

@@ -1,0 +1,52 @@
+.msg_user
+{
+	list-style-type: none;
+	margin-top: 18px;
+	background-color: silver;
+	width: 77%;
+}
+.user1
+{
+    float: right;
+    background-color: silver;
+    padding: 7px;
+    margin: 9px;
+    text-align: right;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.user2
+{
+	float: left;
+    background-color: burlywood;
+    padding: 7px;
+    margin: 9px;
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+.msg_img
+{
+    width: 42px;
+    height: 32px;
+    margin-top: 15px;
+}
+.textmsgarea
+{
+    margin-top:15px;
+    border: none;
+    position: relative;
+  /*   z-index: auto;
+  position: relative;
+  line-height: 22.4px;
+  font-size: 14px;
+  transition: none; */
+    /* background: transparent !important; */
+}
+
+   

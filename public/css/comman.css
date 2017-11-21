@@ -28,7 +28,6 @@
   
     .accepted_user 
     {
-        margin-left: -46px;
         margin-top: 21px;
     }
     .requeste_user
@@ -47,6 +46,15 @@
         top: -15px;
         left: -10px;
     }
+
+    .badge_content_msg
+    {
+        background: red;
+        position: relative;
+        top: -19px;
+        left: -11px;
+    }
+    
     .border_line
     {
         border-color: cornflowerblue;
@@ -73,4 +81,52 @@
     color: #fff;
     background-color: cadetblue;
     border-color: currentColor;
+}
+.form_post
+{
+        margin-left: 33px;
+    margin-top: 22px;
+}
+.post_head
+{
+    margin-left: 37px;
+    margin-top: 14px;
+    margin-bottom: -17px;
+    width: 156px;
+    height: 28px;
+    text-align: center;
+}
+
+.post_img
+ {
+    height: 53px;
+    width: 81%;
+    margin-top: 16px;
+    margin-left: -13px;
+}
+
+.sidebar_tag
+{
+ 
+}
+ .all_info li a
+{
+    list-style-type: none;
+    font-size: 18px;
+    color: darkgreen;
+    text-decoration: none;
+}
+.user_post_content
+{
+    margin-left: -52px;
+    margin-top: -8px;
+}
+
+.post_upload_img
+{
+    width: 260px;
+    height: 115px;
+    margin-bottom: 20px;
+    margin-top: 34px;
+    margin-left: -69px;
 }

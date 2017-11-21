@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('profile.master')
 
 @section('content')
  <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
@@ -127,6 +127,13 @@
     </div>
 </div>
 @endsection
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/profile.js') }}"></script>
+     <script src="{{ asset('js/profile.js') }}"></script>
+     <script type="text/javascript">
+       $(document).ready(function(){
+         $('.change').on('click',function(){
+          $('.change').hide();
+          $('.upload').show('slide');
+         })
+       })
+     </script>
 

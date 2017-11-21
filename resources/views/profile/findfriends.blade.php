@@ -1,9 +1,10 @@
-@extends('layouts.app')
+@extends('profile.master')
 
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+          @include('layouts.sidebar')
+        <div class="col-md-9">
             <div class="panel panel-default">
                 <div class="panel-heading"><h3><b> Find Friends</b></h3></div>
 

@@ -14,6 +14,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/comman.css') }}" rel="stylesheet">
+     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     
 </head>
 <body>
@@ -45,7 +46,8 @@
                         <li><a href="{{ url('friend/requestes') }}"> Friend Request (
                           {{App\Friendship::where('status',0)->where('user_requested',Auth::user()->id)->count()}}
                             )</a></li>
-                       <li><a href="{{ url('friends') }}">My Friends</a></li>
+                        <li>  <a href="{{url('jobs')}}"  style="background-color:#283E4A; color:#fff; padding:5px 15px 5px 15px; border-radius:5px; margin:8px">Find Job</a></li>
+
                         @endif
                        
 
@@ -59,8 +61,43 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                          <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right: -19px;  margin-top: 3px;color: black;">
+                                    <span class="glyphicon glyphicon-envelope" style="font-size: 25px;"></span>
+                                    <span class="badge badge_content_msg">
+                                        @include('unreadmsg.unread')
+                                    </span>
+                                </a>
+
+                                <?php 
+                                   $messages = DB::table('conversions as c')->leftjoin('users as u','u.id','c.user_two')
+                                                                           ->where('user_one',Auth::user()->id)
+                                                                           ->where('status',1)
+                                                                           ->orderBy('c.created_at','desc')
+                                                                           ->get();
+                                 ?>
+                                <ul class="dropdown-menu">
+                                    @foreach($messages as $msg)
+                                        @if($msg->status == 1)
+                                            <li style="background-color:darkgrey"> <a href="{{url('messages')}}/{{$msg->id}}">                                                 
+                                         @else
+                                              <li> 
+                                         @endif 
+                                                <a href="{{url('messages')}}/{{$msg->id}}">
+                                                  <img src="{{url('../')}}/images/{{$msg->image}}"  height="50px" width="50px" class="img-rounded ">
+                                                   <b style="color:green; margin-left: 13px;">{{ucwords($msg->name)}}</b><small><span style="argin-left: 8px;"></span></small>
+                                                    <small><i class="fa fa-users" aria-hidden="true"  style="color: black;"></i></small>
+                                               </a>
+                                                    <hr class="border_line">
+                                            </li>
+                                          
+                                    @endforeach
+                                </ul>
+                        </li>
+                        
+                         <li class="dropdown">
                                 <a href="{{ url('friends') }}">
-                                   <i class="fa fa-users fa-2x" aria-hidden="true"  style="color: black;"></i>
+                                    <img src="{{url('../')}}/images/frnd1.png" width="35px"  class="img-circle" style="color: black" >
+                                  
                                 </a>
                             </li>
 
